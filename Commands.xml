@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<KeyinTree xmlns="http://www.bentley.com/schemas/1.0/MicroStation/AddIn/KeyinTree.xsd">
+	<RootKeyinTable ID="root">
+		<Keyword SubtableRef="CreateElement"
+             CommandClass="MacroCommand" CommandWord="csAddins" >
+			<Options Required="true"/>
+		</Keyword>
+    <!--<Keyword SubtableRef="DemoForm" 
+             CommandClass="MacroCommand" CommandWord="csAddins">
+      <Options Required="true"/>
+    </Keyword>-->
+	</RootKeyinTable>
+
+	<SubKeyinTables>
+		<KeyinTable ID="CreateElement">
+			<Keyword SubtableRef="Commands" CommandWord="CreateElement">
+				<Options Required="true"/>
+			</Keyword>
+      <Keyword SubtableRef="DemoFormCmds" CommandWord="DemoForm">
+        <Options Required="true" />
+      </Keyword>
+		</KeyinTable>
+    <!--<KeyinTable ID="DemoForm">
+      <keyword SubtableRef="DemoCommands" CommandWord="DemoForm" >
+				<Options Required="true"/>
+      </keyword>
+    </KeyinTable>-->
+		<KeyinTable ID="Commands">
+      <Keyword CommandWord="DrawPoint"></Keyword>
+			<Keyword CommandWord="LineAndLineString1"> </Keyword>
+			<Keyword CommandWord="LineAndLineString2"> </Keyword>
+			<Keyword CommandWord="LineAndLineString3"> </Keyword>
+			<Keyword CommandWord="ShapeAndComplexShape"> </Keyword>
+			<Keyword CommandWord="TextString"> </Keyword>
+			<Keyword CommandWord="Cell"> </Keyword>
+			<Keyword CommandWord="Dimension"> </Keyword>
+			<Keyword CommandWord="BsplineCurve"> </Keyword>
+      <Keyword CommandWord="Cone"> </Keyword>
+      <Keyword CommandWord="TestConvertToDgnNetEle"> </Keyword>
+      <Keyword CommandWord="TestConvertToInteropEle"> </Keyword>
+		</KeyinTable>
+		<KeyinTable ID="DemoFormCmds">
+			<Keyword CommandWord="Toolbar"/>
+			<Keyword CommandWord="Modal"/>
+			<Keyword CommandWord="TopLevel"/>
+			<Keyword CommandWord="ToolSettings"/>
+			<Keyword CommandWord="LevelChanged"/>
+			<Keyword CommandWord="ShowLevelNames"/>			
+		</KeyinTable>
+		
+	</SubKeyinTables>
+
+	<KeyinHandlers>
+    <KeyinHandler Keyin="csAddins CreateElement DrawPoint"
+			Function="csAddins.CreateElement.DrawPoint"/>
+		<KeyinHandler Keyin="csAddins CreateElement LineAndLineString1"
+			Function="csAddins.CreateElement.LineAndLineString1"/>
+		<KeyinHandler Keyin="csAddins CreateElement LineAndLineString2"
+			Function="csAddins.CreateElement.LineAndLineString2"/>
+		<KeyinHandler Keyin="csAddins CreateElement LineAndLineString3"
+			Function="csAddins.CreateElement.LineAndLineString3"/>
+		<KeyinHandler Keyin="csAddins CreateElement ShapeAndComplexShape"
+			Function="csAddins.CreateElement.ShapeAndComplexShape"/>
+		<KeyinHandler Keyin="csAddins CreateElement TextString"
+			Function="csAddins.CreateElement.TextString"/>
+		<KeyinHandler Keyin="csAddins CreateElement Cell"
+			Function="csAddins.CreateElement.Cell"/>
+		<KeyinHandler Keyin="csAddins CreateElement Dimension"
+			Function="csAddins.CreateElement.Dimension"/>
+		<KeyinHandler Keyin="csAddins CreateElement BsplineCurve"
+			Function="csAddins.CreateElement.BsplineCurve"/>
+		<KeyinHandler Keyin="csAddins CreateElement Cone"
+			Function="csAddins.CreateElement.Cone"/>
+    <KeyinHandler Keyin="csAddins CreateElement TestConvertToDgnNetEle"
+			Function="csAddins.CreateElement.TestConvertToDgnNetEle"/>
+    <KeyinHandler Keyin="csAddins CreateElement TestConvertToInteropEle"
+			Function="csAddins.CreateElement.TestConvertToInteropEle"/>
+		<KeyinHandler Keyin="csAddins DemoForm Toolbar" Function="csAddins.DemoForm.Toolbar"/>
+		<KeyinHandler Keyin="csAddins DemoForm Modal" Function="csAddins.DemoForm.Modal"/>
+		<KeyinHandler Keyin="csAddins DemoForm TopLevel" Function="csAddins.DemoForm.TopLevel"/>
+		<KeyinHandler Keyin="csAddins DemoForm ToolSettings" Function="csAddins.DemoForm.ToolSettings"/>
+		<KeyinHandler Keyin="csAddins DemoForm LevelChanged" Function="csAddins.DemoForm.LevelChanged"/>
+		<KeyinHandler Keyin="csAddins DemoForm ShowLevelNames" Function="csAddins.DemoForm.ShowLevelNames"/>
+	</KeyinHandlers>
+</KeyinTree>
